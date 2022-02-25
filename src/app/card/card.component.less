@@ -1,0 +1,172 @@
+.card {
+    padding-top: 65px;
+    border: none;
+    h1 {
+        font-size: 52px;
+        line-height: 54px;
+        font-weight: 800;
+    }
+    .search {
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        margin: 65px 0 30px;
+        height: 40px;
+        max-width: 270px;
+        border-radius: 10px;
+        overflow: hidden;
+        background: #ecedf4;
+        input {
+            border: none;
+            background:transparent;
+        }
+    }
+    .filters {
+        width: 20%;
+        .tags {
+            button {
+                background-color: #fff;
+                width: fit-content;
+                padding: 12px 16px;
+                font-weight: 400;
+                font-size: 14px;
+                margin-bottom: 6px;
+                border: 1px solid #000;
+                border-radius: 100px;
+                color: #000;
+                line-height: 1;
+                text-align: center;
+                cursor: pointer;
+                transition: background-color .15s ease-out,color .15s ease-out;
+                &:hover {
+                    border-color: #3f2aff;
+                    color: #fff;
+                    background-color: #3f2aff;
+                }
+            }
+        }
+        .main-header {
+            display: flex;
+            img {
+                padding-left: 10px;
+                width: 23px;
+                height: auto;
+            }
+        }
+        .slider-block {
+            position: relative;
+            .circle {
+                position: absolute;
+                width: 14px;
+                height: 14px;
+                cursor: pointer;
+                margin-top: -5px;
+                border-radius: 50%;
+                border: 1px solid #000;
+                background-color: #fff;
+                touch-action: pan-x;
+                transition: transform .15s ease-out,-webkit-transform .15s ease-out;
+            }
+        }
+    }
+    .blocks {
+        width: 80%;
+        margin-left: 50px;
+        h2 {
+            font-weight: 800;
+            img {
+                width: 35px;
+                height: auto;
+                padding-left: 15px;
+            }
+        }
+        .cards {
+            display: grid;
+            grid-gap: 20px;
+            grid-template-columns: repeat(2,1fr);
+            .card-content {
+                position: relative;
+                z-index: 1;
+                display: grid;
+                grid-column-gap: 16px;
+                grid-template-columns: 1fr 120px;
+                min-height: 174px;
+                grid-row-gap: 12px;
+                padding: 24px;
+
+                border-radius: 10px;
+                overflow: hidden;
+                color: #000;
+                text-decoration: none;
+                h3 {
+                    font-size: 20px;
+                    line-height: 24px;
+                    font-weight: 700;
+                }
+                img {
+                    height: 120px;
+                    grid-row: 1/4;
+                    grid-column: 2/3;
+                    align-self: center;
+                }
+                &.one {
+                    background-color: rgb(250, 230, 171);
+                }
+                &.two {
+                    background-color: rgb(191, 242, 207);
+                }
+                &.three {
+                    background-color: rgb(115, 188, 255);
+                }
+                &.four {
+                    background-color: rgb(255, 181, 37);
+                }
+                &.five {
+                    background-color: rgb(71, 194, 147);
+                }
+                &.six {
+                    background-color: rgb(242, 183, 211);
+                }
+                &.seven {
+                    background-color: rgb(57, 162, 254);
+                }
+                &.eight {
+                    background-color: rgb(255, 189, 89);
+                }
+                &.nine {
+                    background-color: rgb(96, 179, 255);
+                }
+                &.ten {
+                    background-color: rgb(149, 239, 214);
+                }
+                
+                &:hover {
+                    z-index: 10;
+                    top: 0;
+                    right: 0;
+                    left: 0;
+                    height: fit-content;
+                    background-color: #3f2aff !important;
+                    color: white;                
+                    transform-origin: top;
+                    transition: transform .4s cubic-bezier(.4,0,0,1);
+                    content: "";
+                }
+            }
+            
+        }
+        .show-more {
+            border-radius: 10px;
+            background-color: transparent;
+            border: 1px solid #000;
+            margin-top: 36px;
+            padding-top: 12px;
+            padding-bottom: 12px;
+            width: 350px;
+        }
+        .cards-more {
+            display: none;
+        }
+        
+    }
+}
